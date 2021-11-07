@@ -1,27 +1,11 @@
 body {
 	background: hsl(257, 40%, 49%);
 	color: white;
-}
-
-.overlays {
-	background-image: url('../bg-mobile.svg');
-	background-repeat: no-repeat;	
-}
-
-.logo {
-	width: 124px;
-	height: 30px;
-}
-
-.mockup {
-	width: 290px;
-	height: 206px;		
+	margin: unset;
 }
 
 .heading {
-	font-family: 'Poppins', sans-serif;
-	font-size: 70%;
-	padding: 2.5rem 2rem 0 2rem;
+	font-family: 'Poppins', sans-serif;	
 }
 
 h1 {
@@ -29,13 +13,12 @@ h1 {
 }
 
 p {
-	line height: 130%;
+	line-height: 190%;
 	font-weight: 400;
 }
 
 .button {
-	font-weight: 400;
-	padding: 0.7rem 2.5rem;
+	font-weight: 400;	
 }
 
 .button {
@@ -45,13 +28,175 @@ p {
 	display: inline-block;
 	text-align: center;
 	border-radius: 30px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;	
 }
 
 .fab {
-	padding: 8px 8px 8px 8px;
 	display: inline-block;
     border: 1px solid white;
-    border-radius: 50%;
-    margin: 0 3px 0 3px;     
+    border-radius: 50%;  
+    text-align: center; 
+}
+
+
+.button:hover {
+	color: white;
+	background: hsl(300, 69%, 71%);
+}
+
+.fab:hover {
+    border: 1px solid hsl(300, 69%, 71%);
+    color: hsl(300, 69%, 71%);
+}
+
+/* mobile device */
+
+@media screen and (min-width: 280px) {
+
+.overlays {
+	display: flex;
+	flex-direction: column;	
+	padding: 0 0 2.5rem 0;
+  background-image: url('../bg-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.heading {
+	font-size: 75%;
+	padding: 0 2.8rem 0 2.8rem;
+	text-align: center;
+}
+
+.logo {
+	width: 40%;
+	height: auto;
+	padding: 2rem 0 0 1rem;	
+}
+
+.mockup {
+	width: 90%;
+	height: auto;
+	padding-top: 3rem;
+	display: block;
+	margin: 0 auto 0 auto;	
+}
+
+.buttons {
+	display: block;
+	margin: 0 auto 0 auto;
+}
+
+.icons {
+	text-align: center;
+}
+
+.button {
+	font-size: 80%;
+	padding: 0.5rem 3.5rem;
+	margin-top: 1.5rem;
+}
+
+  .fab {
+	padding: 7px 7px 7px 7px;
+	width: 0.7rem;
+  height: 0.7rem;  
+  font-size: 65%;
+  margin: 2rem 0.2rem 2rem 0.2rem; 
+  position: relative;
+}
+
+.fab::before {
+	position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)
+}
+
+
+}
+
+/* desktop device */
+
+@media screen and (min-width: 1300px) {
+  
+.main-container {
+  flex-direction: row;
+	padding-top: 4rem;
+}
+
+body {
+	background-image: url('../bg-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.overlays {
+	background-image: unset;
+	padding: unset;
+}
+
+.logo {
+	width: 30%;
+	height: auto;
+	padding-top: unset;	
+}
+
+.mockup {
+	width: 95%;
+	height: auto;
+	padding-top: 5rem;	
+	justify-content: center;
+	align-items: center;
+	margin: unset;
+	display: unset;
+}
+
+.heading {
+	text-align: unset;
+	font-size: 110%;
+	padding: 3rem 0 0 1rem;
+	width: 40%;
+	height: auto;
+}
+
+p {
+	font-size: 100%;
+	line-height: 140%;
+}
+
+h1 {
+	font-size: 230%;
+	padding-right: 3rem;
+}
+
+.buttons {
+	display: unset;
+	flex-direction: unset;
+	justify-content: unset;
+	align-items: unset;
+}
+
+.button {
+  	margin-top: unset;
+  	font-size: 100%;
+  	padding: 0.8rem 4rem; 
+  }
+
+.fab {
+	padding: 11px 11px 11px 11px;
+	width: 1.5rem;
+  height: 1.5rem; 
+  font-size: 110%;     
+}
+
+.icons {
+	float: right;
+	padding: 0 5rem 1rem 0;
+}
+
 }
