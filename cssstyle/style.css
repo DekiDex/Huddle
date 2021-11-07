@@ -150,10 +150,7 @@ body {
 	width: 95%;
 	height: auto;
 	padding-top: 5rem;	
-	justify-content: center;
-	align-items: center;
 	margin: unset;
-	display: unset;
 }
 
 .heading {
@@ -165,7 +162,6 @@ body {
 }
 
 p {
-	font-size: 100%;
 	line-height: 140%;
 }
 
